@@ -10,4 +10,4 @@ Chapter 1: Build a Large Language Model (From Scratch)
   
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/1.png)
 
-- 
+- Readers with a background in machine learning may note that labeling information is typically required for traditional machine learning models and deep neural networks trained via the conventional supervised learning paradigm. However, this is not the case for the pretraining stage of LLMs. In this phase, LLMs use self-supervised learning, where the model generates its own labels from the input data.
