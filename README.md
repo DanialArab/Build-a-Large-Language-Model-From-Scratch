@@ -352,3 +352,4 @@ Given the causal attention mask setup in figure 6.12, the last token in a sequen
 We are now ready to transform the last token into class label predictions and calculate the model’s initial prediction accuracy. Subsequently, we will fine-tune the model for the spam classification task.
 
 ### Calculating the classification loss and accuracy
+HERE
