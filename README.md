@@ -337,6 +337,8 @@ Technically, training the output layer we just added is sufficient. However, as 
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/6.trainable_layers.png)
 
+Remember that we are interested in fine-tuning this model to return a class label indicating whether a model input is “spam” or “not spam.” We don’t need to fine-tune all four output rows; instead, we can focus on a single output token. In particular, we will focus on the last row corresponding to the last output token, as shown in figure 6.11.
 
+![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/7.last_output_token.png)
 
 up to Calculating the classification loss and accuracy
