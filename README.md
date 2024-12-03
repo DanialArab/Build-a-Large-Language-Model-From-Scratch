@@ -81,6 +81,8 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/5.Adding_a_classification_head.png)
 
+Before we attempt the modification shown in figure above, let’s print the model architecture via print(model):
+
     GPTModel(
       (tok_emb): Embedding(50257, 768)
       (pos_emb): Embedding(1024, 768)
