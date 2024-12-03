@@ -76,6 +76,4 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
  
     Based on the output, it’s apparent that the model is struggling to follow instructions. This result is expected, as it has only undergone pretraining and lacks instruction fine-tuning. So, let’s prepare the model for classification fine-tuning.
 
-
- 
-- 
+- Adding a classification head
