@@ -68,7 +68,7 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
     
     print(token_ids_to_text(token_ids, tokenizer))
 
-which returns back:
+    which returns back:
     
     Is the following text 'spam'? Answer with 'yes' or 'no': 'You are a winner you have been specially selected to receive $1000 cash or a $2000 award.'
     
