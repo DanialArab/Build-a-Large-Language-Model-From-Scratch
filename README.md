@@ -77,3 +77,7 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
     Based on the output, it’s apparent that the model is struggling to follow instructions. This result is expected, as it has only undergone pretraining and lacks instruction fine-tuning. So, let’s prepare the model for classification fine-tuning.
 
 - Adding a classification head
+  - We must modify the pretrained LLM to prepare it for classification fine-tuning. To do so, we replace the original output layer, which maps the hidden representation to a vocabulary of 50,257, with a smaller output layer that maps to two classes: 0 (“not spam”) and 1 (“spam”), as shown in figure 6.9. We use the same model as before, except we replace the output layer.
+
+![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/5.Adding_a_classification_head.png)
+
