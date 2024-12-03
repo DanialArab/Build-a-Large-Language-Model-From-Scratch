@@ -27,7 +27,7 @@
 
 ## Chapter 6: Fine-tuning for classification
 
-- Different categories of fine-tuning
+### Different categories of fine-tuning
 
   - The most common ways to fine-tune language models are instruction fine-tuning and classification fine-tuning.
     - Instruction fine-tuning involves training a language model on a set of tasks using specific instructions to improve its ability to understand and execute tasks described in natural language prompts.
@@ -35,21 +35,22 @@
 
 In contrast to the classification fine-tuned model depicted in figure 6.3, an instruction fine-tuned model typically can undertake a broader range of tasks. We can view a classification fine-tuned model as highly specialized, and generally, it is easier to develop a specialized model than a generalist model that works well across various tasks.
 
-- Choosing the right approach
+### Choosing the right approach
 Instruction fine-tuning improves a model’s ability to understand and generate responses based on specific user instructions. Instruction fine-tuning is best suited for models that need to handle a variety of tasks based on complex user instructions, improving flexibility and interaction quality. Classification fine-tuning is ideal for projects requiring precise categorization of data into predefined classes, such as sentiment analysis or spam detection.
 
 While instruction fine-tuning is more versatile, it demands larger datasets and greater computational resources to develop models proficient in various tasks. In contrast, classification fine-tuning requires less data and compute power, but its use is confined to the specific classes on which the model has been trained.
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/4.fine_tune_classification_steps.png) 
 
-- Data preparation: we need to perform:
+### Data preparation: we need to perform:
+
   - Data balancing
   - Data splitting into train/test/val
   - Creating Pytorch Data Loaders, which require us to perform padding/truncation
   - Padding/truncating the validation and test sets to match the length of the longest training sequence
   - Creating batches of data
 
-- Initializing a model with pretrained weights
+### Initializing a model with pre-trained weights
   - we load a pre-trained GPT model
   - Although his model is good in text completion its performance to perform the classification is very poor:
 
@@ -76,7 +77,8 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
  
     Based on the output, it’s apparent that the model is struggling to follow instructions. This result is expected, as it has only undergone pretraining and lacks instruction fine-tuning. So, let’s prepare the model for classification fine-tuning.
 
-- Adding a classification head
+### Adding a classification head
+
   - We must modify the pretrained LLM to prepare it for classification fine-tuning. To do so, we replace the original output layer, which maps the hidden representation to a vocabulary of 50,257, with a smaller output layer that maps to two classes: 0 (“not spam”) and 1 (“spam”), as shown in figure 6.9. We use the same model as before, except we replace the output layer.
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/5.Adding_a_classification_head.png)
@@ -325,6 +327,9 @@ As previously discussed, the GPTModel consists of embedding layers followed by 1
 
 Next, we replace the out_head with a new output layer (see figure 6.9) that we will fine-tune.
 
-- Fine-tuning selected layers vs. all layers
+### Fine-tuning selected layers vs. all layers
 
 Since we start with a pretrained model, it’s not necessary to fine-tune all model layers. In neural network-based language models, the lower layers generally capture basic language structures and semantics applicable across a wide range of tasks and datasets. So, fine-tuning only the last layers (i.e., layers near the output), which are more specific to nuanced linguistic patterns and task-specific features, is often sufficient to adapt the model to new tasks. A nice side effect is that it is computationally more efficient to fine-tune only a small number of layers. 
+
+#### Freezing the model is the first step 
+
