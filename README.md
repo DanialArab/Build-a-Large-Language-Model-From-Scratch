@@ -50,4 +50,6 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
   - Creating batches of data
 
 - Initializing a model with pretrained weights
-  - f
+  - we load a pre-trained GPT model
+ 
+
