@@ -333,3 +333,7 @@ Since we start with a pretrained model, it’s not necessary to fine-tune all mo
 
 #### Freezing the model is the first step 
 
+Technically, training the output layer we just added is sufficient. However, as I found in experiments, fine-tuning additional layers can noticeably improve the predictive performance of the model. (For more details, refer to appendix B.) We also configure the last transformer block and the final LayerNorm module, which connects this block to the output layer, to be trainable, as depicted in figure 6.10.
+
+![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/6.trainable_layers.png)
+
