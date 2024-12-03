@@ -27,3 +27,6 @@ Chapter 1: Build a Large Language Model (From Scratch)
 
 Chapter 6: Fine-tuning for classification
 
+- Different categories of fine-tuning
+
+-- The most common ways to fine-tune language models are instruction fine-tuning and classification fine-tuning. Instruction fine-tuning involves training a language model on a set of tasks using specific instructions to improve its ability to understand and execute tasks described in natural language prompts, as illustrated in figure 6.2.
