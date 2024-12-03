@@ -341,4 +341,14 @@ Remember that we are interested in fine-tuning this model to return a class labe
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/7.last_output_token.png)
 
-up to Calculating the classification loss and accuracy
+We still need to convert the values into a class-label prediction. But first, let’s understand why we are particularly interested in the last output token only.
+
+We have already explored the attention mechanism, which establishes a relationship between each input token and every other input token, and the concept of a causal attention mask, commonly used in GPT-like models (see chapter 3). This mask restricts a token’s focus to its current position and the those before it, ensuring that each token can only be influenced by itself and the preceding tokens, as illustrated in figure 6.12.
+
+![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/8.causal_attention_mechanism.png)
+
+Given the causal attention mask setup in figure 6.12, the last token in a sequence accumulates the most information since it is the only token with access to data from all the previous tokens. Therefore, in our spam classification task, we focus on this last token during the fine-tuning process.
+
+We are now ready to transform the last token into class label predictions and calculate the model’s initial prediction accuracy. Subsequently, we will fine-tune the model for the spam classification task.
+
+### Calculating the classification loss and accuracy
