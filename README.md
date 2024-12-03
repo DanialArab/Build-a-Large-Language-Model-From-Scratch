@@ -1,6 +1,6 @@
 # Build-a-Large-Language-Model-From-Scratch
 
-Chapter 1: Build a Large Language Model (From Scratch)
+## Chapter 1: Build a Large Language Model (From Scratch)
 
 - The “large” in “large language model” refers to both the model’s size in terms of parameters and the immense dataset on which it’s trained.
 - Since LLMs are capable of generating text, LLMs are also often referred to as a form of generative artificial intelligence, often abbreviated as generative AI or GenAI.
@@ -25,8 +25,8 @@ Chapter 1: Build a Large Language Model (From Scratch)
 - up to Transformers vs. LLMs
 
 
-Chapter 6: Fine-tuning for classification
+## Chapter 6: Fine-tuning for classification
 
 - Different categories of fine-tuning
 
--- The most common ways to fine-tune language models are instruction fine-tuning and classification fine-tuning. Instruction fine-tuning involves training a language model on a set of tasks using specific instructions to improve its ability to understand and execute tasks described in natural language prompts, as illustrated in figure 6.2.
+  - The most common ways to fine-tune language models are instruction fine-tuning and classification fine-tuning. Instruction fine-tuning involves training a language model on a set of tasks using specific instructions to improve its ability to understand and execute tasks described in natural language prompts, as illustrated in figure 6.2.
