@@ -337,3 +337,4 @@ Technically, training the output layer we just added is sufficient. However, as 
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/6.trainable_layers.png)
 
+
