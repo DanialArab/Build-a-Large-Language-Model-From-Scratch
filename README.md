@@ -326,5 +326,5 @@ As previously discussed, the GPTModel consists of embedding layers followed by 1
 Next, we replace the out_head with a new output layer (see figure 6.9) that we will fine-tune.
 
 - Fine-tuning selected layers vs. all layers
-- 
+
 Since we start with a pretrained model, it’s not necessary to fine-tune all model layers. In neural network-based language models, the lower layers generally capture basic language structures and semantics applicable across a wide range of tasks and datasets. So, fine-tuning only the last layers (i.e., layers near the output), which are more specific to nuanced linguistic patterns and task-specific features, is often sufficient to adapt the model to new tasks. A nice side effect is that it is computationally more efficient to fine-tune only a small number of layers. 
