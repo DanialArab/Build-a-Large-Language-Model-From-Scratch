@@ -42,7 +42,6 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/4.fine_tune_classification_steps.png) 
 
-
 - Data preparation: we need to perform:
   - Data balancing
   - Data splitting into train/test/val
@@ -51,4 +50,4 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
   - Creating batches of data
 
 - Initializing a model with pretrained weights
-  - 
+  - d
