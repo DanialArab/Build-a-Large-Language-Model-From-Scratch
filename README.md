@@ -23,3 +23,7 @@ Chapter 1: Build a Large Language Model (From Scratch)
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/3.bert_vs_gpt.png)
 
 - up to Transformers vs. LLMs
+
+
+Chapter 6: Fine-tuning for classification
+
