@@ -320,3 +320,7 @@ Before we attempt the modification shown in figure above, let’s print the mode
       (final_norm): LayerNorm()
       (out_head): Linear(in_features=768, out_features=50257, bias=False)
       )
+
+As previously discussed, the GPTModel consists of embedding layers followed by 12 identical transformer blocks (only the last block is shown for brevity), followed by a final LayerNorm and the output layer, out_head.
+
+Next, we replace the out_head with a new output layer (see figure 6.9) that we will fine-tune.
