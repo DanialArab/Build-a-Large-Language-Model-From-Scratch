@@ -51,5 +51,29 @@ While instruction fine-tuning is more versatile, it demands larger datasets and 
 
 - Initializing a model with pretrained weights
   - we load a pre-trained GPT model
- 
+  - Although his model is good in text completion its performance to perform the classification is very poor:
 
+     text_2 = (
+        "Is the following text 'spam'? Answer with 'yes' or 'no':"
+        " 'You are a winner you have been specially"
+        " selected to receive $1000 cash or a $2000 award.'"
+    )
+    
+    token_ids = generate_text_simple(
+        model=model,
+        idx=text_to_token_ids(text_2, tokenizer),
+        max_new_tokens=23,
+        context_size=BASE_CONFIG["context_length"]
+    )
+    
+    print(token_ids_to_text(token_ids, tokenizer))
+
+which returns back:
+    
+    Is the following text 'spam'? Answer with 'yes' or 'no': 'You are a winner you have been specially selected to receive $1000 cash or a $2000 award.'
+    
+    The following text 'spam'? Answer with 'yes' or 'no': 'You are a winner
+ 
+  - 
+ 
+- 
