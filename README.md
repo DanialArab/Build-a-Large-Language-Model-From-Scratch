@@ -40,3 +40,4 @@ Instruction fine-tuning improves a model’s ability to understand and generate 
 
 While instruction fine-tuning is more versatile, it demands larger datasets and greater computational resources to develop models proficient in various tasks. In contrast, classification fine-tuning requires less data and compute power, but its use is confined to the specific classes on which the model has been trained.
 
+![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/4.fine_tune_classification_steps.png)
