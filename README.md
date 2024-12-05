@@ -2,9 +2,8 @@
 
 1. [Chapter 1: Build a Large Language Model (From Scratch)](#1)
 2. [Chapter 6: Fine-tuning for classification](#2)  
-   2. [Different categories of fine-tuning](#3)
-   3. [Hard Questions](#4) 
-3. [Complete SQL Mastery](#5)  
+   1. [Different categories of fine-tuning](#3)
+   2. [Choosing the right approach](#4) 
  
 
 <a name="1"></a>
