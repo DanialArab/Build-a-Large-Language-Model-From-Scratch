@@ -10,8 +10,10 @@
    6. [Fine-tuning](#8)
       1. [Fine-tuning selected layers vs. all layers](#9)
       2. [Freezing the model is the first step](#10)
-      3. [
- 
+      3. [Calculating the classification loss and accuracy](#11)
+      4. [Fine-tuning the model on supervised data](#12)
+      5. [Using the LLM as a spam classifier](#13)
+   7. [Summary](#14)
 
 <a name="1"></a>
 ## Chapter 1: Build a Large Language Model (From Scratch)
@@ -378,12 +380,16 @@ Given the causal attention mask setup in figure 6.12, the last token in a sequen
 
 We are now ready to transform the last token into class label predictions and calculate the model’s initial prediction accuracy. Subsequently, we will fine-tune the model for the spam classification task.
 
+<a name="11"></a>
 ### Calculating the classification loss and accuracy
 
+<a name="12"></a>
 ### Fine-tuning the model on supervised data
 
+<a name="13"></a>
 ### Using the LLM as a spam classifier
 
+<a name="14"></a>
 ### Summary
 
 - There are different strategies for fine-tuning LLMs, including classification fine-tuning and instruction fine-tuning.
