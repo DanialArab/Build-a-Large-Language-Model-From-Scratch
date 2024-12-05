@@ -1,5 +1,13 @@
 # Build-a-Large-Language-Model-From-Scratch
 
+1. [Chapter 1: Build a Large Language Model (From Scratch)](#1)
+2. [Chapter 6: Fine-tuning for classification](#2)  
+   2. [Different categories of fine-tuning](#3)
+   3. [Hard Questions](#4) 
+3. [Complete SQL Mastery](#5)  
+ 
+
+<a name="1"></a>
 ## Chapter 1: Build a Large Language Model (From Scratch)
 
 - The “large” in “large language model” refers to both the model’s size in terms of parameters and the immense dataset on which it’s trained.
@@ -25,8 +33,10 @@
 - up to Transformers vs. LLMs
 
 
+<a name="2"></a>
 ## Chapter 6: Fine-tuning for classification
 
+<a name="3"></a>
 ### Different categories of fine-tuning
 
   - The most common ways to fine-tune language models are instruction fine-tuning and classification fine-tuning.
