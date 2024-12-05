@@ -5,6 +5,11 @@
    1. [Different categories of fine-tuning](#3)
    2. [Choosing the right approach](#4)
    3. [Data preparation](#5)
+   4. [Initializing a model with pre-trained weights](#6)
+   5. [Adding a classification head](#7)
+   6. [Fine-tuning](#8)
+      1. [Fine-tuning selected layers vs. all layers](#9)
+      2. [
  
 
 <a name="1"></a>
@@ -64,6 +69,7 @@ we need to perform:
   - Padding/truncating the validation and test sets to match the length of the longest training sequence
   - Creating batches of data
 
+<a name="6"></a>
 ### Initializing a model with pre-trained weights
   - we load a pre-trained GPT model
   - Although his model is good in text completion its performance to perform the classification is very poor:
@@ -91,6 +97,7 @@ we need to perform:
  
     Based on the output, it’s apparent that the model is struggling to follow instructions. This result is expected, as it has only undergone pretraining and lacks instruction fine-tuning. So, let’s prepare the model for classification fine-tuning.
 
+<a name="7"></a>
 ### Adding a classification head
 
   - We must modify the pretrained LLM to prepare it for classification fine-tuning. To do so, we replace the original output layer, which maps the hidden representation to a vocabulary of 50,257, with a smaller output layer that maps to two classes: 0 (“not spam”) and 1 (“spam”), as shown in figure 6.9. We use the same model as before, except we replace the output layer.
@@ -341,10 +348,15 @@ As previously discussed, the GPTModel consists of embedding layers followed by 1
 
 Next, we replace the out_head with a new output layer (see figure 6.9) that we will fine-tune.
 
-### Fine-tuning selected layers vs. all layers
+<a name="8"></a>
+### Fine-tuning 
+
+<a name="9"></a>
+#### Fine-tuning selected layers vs. all layers
 
 Since we start with a pretrained model, it’s not necessary to fine-tune all model layers. In neural network-based language models, the lower layers generally capture basic language structures and semantics applicable across a wide range of tasks and datasets. So, fine-tuning only the last layers (i.e., layers near the output), which are more specific to nuanced linguistic patterns and task-specific features, is often sufficient to adapt the model to new tasks. A nice side effect is that it is computationally more efficient to fine-tune only a small number of layers. 
 
+<a name="8"></a>
 #### Freezing the model is the first step 
 
 Technically, training the output layer we just added is sufficient. However, as I found in experiments, fine-tuning additional layers can noticeably improve the predictive performance of the model. (For more details, refer to appendix B.) We also configure the last transformer block and the final LayerNorm module, which connects this block to the output layer, to be trainable, as depicted in figure 6.10.
