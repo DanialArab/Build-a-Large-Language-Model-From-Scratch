@@ -9,7 +9,8 @@
    5. [Adding a classification head](#7)
    6. [Fine-tuning](#8)
       1. [Fine-tuning selected layers vs. all layers](#9)
-      2. [
+      2. [Freezing the model is the first step](#10)
+      3. [
  
 
 <a name="1"></a>
@@ -356,7 +357,7 @@ Next, we replace the out_head with a new output layer (see figure 6.9) that we w
 
 Since we start with a pretrained model, it’s not necessary to fine-tune all model layers. In neural network-based language models, the lower layers generally capture basic language structures and semantics applicable across a wide range of tasks and datasets. So, fine-tuning only the last layers (i.e., layers near the output), which are more specific to nuanced linguistic patterns and task-specific features, is often sufficient to adapt the model to new tasks. A nice side effect is that it is computationally more efficient to fine-tune only a small number of layers. 
 
-<a name="8"></a>
+<a name="10"></a>
 #### Freezing the model is the first step 
 
 Technically, training the output layer we just added is sufficient. However, as I found in experiments, fine-tuning additional layers can noticeably improve the predictive performance of the model. (For more details, refer to appendix B.) We also configure the last transformer block and the final LayerNorm module, which connects this block to the output layer, to be trainable, as depicted in figure 6.10.
