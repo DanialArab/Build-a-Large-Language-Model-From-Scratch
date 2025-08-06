@@ -16,3 +16,6 @@ to both researchers and developers.
 
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/Fig_A_1.png)
+
+
+up to Installing PyTorch on page 254
