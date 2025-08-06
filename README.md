@@ -46,7 +46,7 @@ them to control updates and modifications to the model as needed.
 
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/3.bert_vs_gpt.png)
 
-- up to Transformers vs. LLMs
+- up to Transformers vs. LLMs 
 
 
 <a name="2"></a>
