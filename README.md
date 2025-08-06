@@ -22,6 +22,14 @@
 - Since LLMs are capable of generating text, LLMs are also often referred to as a form of generative artificial intelligence, often abbreviated as generative AI or GenAI.
 - Most LLMs today are implemented using the PyTorch deep learning library, which is what we will use.
 - Why should we build our own LLMs? Coding an LLM from the ground up is an excellent exercise to understand its mechanics and limitations. Also, it equips us with the required knowledge for pretraining or fine-tuning existing open source LLM architectures to our own domain-specific datasets or tasks.
+- Using custom-built LLMs offers several advantages, particularly regarding data privacy.
+For instance, companies may prefer not to share sensitive data with third-party
+LLM providers like OpenAI due to confidentiality concerns. Additionally, developing
+smaller custom LLMs enables deployment directly on customer devices, such as laptops
+and smartphones, which is something companies like Apple are currently exploring.
+This local implementation can significantly decrease latency and reduce server-related
+costs. Furthermore, custom LLMs grant developers complete autonomy, allowing
+them to control updates and modifications to the model as needed.
 - The general process of creating an LLM includes pretraining and fine-tuning. The “pre” in “pretraining” refers to the initial phase where a model like an LLM is trained on a large, diverse dataset to develop a broad understanding of language. This pretrained model then serves as a foundational resource that can be further refined through fine-tuning, a process where the model is specifically trained on a narrower dataset that is more specific to particular tasks or domains. This two-stage training approach consisting of pretraining and fine-tuning is depicted in figure below:
   
 ![](https://github.com/DanialArab/images/blob/main/llm_from_scratch/1.png)
