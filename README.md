@@ -359,6 +359,7 @@ As previously discussed, the GPTModel consists of embedding layers followed by 1
 
 Next, we replace the out_head with a new output layer (see figure 6.9) that we will fine-tune.
 
+
 <a name="8"></a>
 ### Fine-tuning 
 
